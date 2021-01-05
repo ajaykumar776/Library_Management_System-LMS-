@@ -10,6 +10,7 @@ require('config.php');
 		$name = $row['name'];
 		$email = $row['email'];
 		$mobile = $row['mobile_no'];
+		$address= $row['address'];
 	}
 ?>
 <!DOCTYPE html>
@@ -54,7 +55,7 @@ require('config.php');
 	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<form action="update.php" method="post">
+			<form action="profile_update.php" method="post">
 				<div class="form-group">
 					<label>Name:</label>
 					<input type="text" class="form-control" value="<?php echo $name;?>" name="name">

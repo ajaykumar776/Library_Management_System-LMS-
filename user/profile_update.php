@@ -1,8 +1,13 @@
 <?php
+session_start();
+	include "config.php";
+	// $connection = mysqli_connect("localhost","root","");
+	// $db = mysqli_select_db($connection,"Library_Management_System");
+	$name = "";
+	$email = "";
+	$mobile = "";
+	$query = "update users set name  ='$_POST[name]',email='$_POST[email]',mobile='$_POST[mobile_no]' where id = '$_SESSION[id]'";
 
-	$connection = mysqli_connect("localhost","root","");
-	$db = mysqli_select_db($connection,"Library_Management_System");
-	$query = "UPDATE users SET' name='[$_POST[name]'],email='$_POST[email]',address='$_POST[address]'";
 
 	$query_run = mysqli_query($connection,$query);
 	if($query_run)
